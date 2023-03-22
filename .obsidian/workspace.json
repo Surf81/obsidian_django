@@ -25,7 +25,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Формы Django/Fields - поля формы.md",
+                "file": "сайт на Django/1. Установка и настройка Django.md",
                 "mode": "source",
                 "source": false
               }
@@ -98,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Формы Django/Fields - поля формы.md",
+                "file": "сайт на Django/1. Установка и настройка Django.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Формы Django/Fields - поля формы.md",
+                "file": "сайт на Django/1. Установка и настройка Django.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Формы Django/Fields - поля формы.md"
+                "file": "сайт на Django/1. Установка и настройка Django.md"
               }
             }
           }
@@ -161,12 +161,15 @@
   },
   "active": "42264b53f206bb77",
   "lastOpenFiles": [
+    "Создание сайта/Памятка по командам.md",
+    "Создание сайта/Полезные ссылки.md",
+    "Создание сайта/Создание сайта.md",
+    "Формы Django/Fields - поля формы.md",
     "Формы Django/_формы моделей Django.md",
     "Модели Django/_модели Django.md",
     "Модели Django/Поля модели - Поля данных.md",
     "Модели Django/Поля модели - ForeignKey.md",
     "Модели Django/Поля модели - Опции полей.md",
-    "Формы Django/Fields - поля формы.md",
     "Валидация/сообщения об ошибках валидации.md",
     "Валидация",
     "Модели Django/class Meta.md",
@@ -174,9 +177,6 @@
     "сайт на Django/1. Установка и настройка Django.md",
     "сайт на Django/_сайт на Django.md",
     "сайт на Django/3. Добавление приложений.md",
-    "Создание сайта/Создание сайта.md",
-    "Создание сайта/Памятка по командам.md",
-    "Создание сайта/Полезные ссылки.md",
     "Модели Django/Поля модели - ManyToManyField.md"
   ]
 }
