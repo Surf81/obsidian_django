@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Модели Django/ограничения базы данных Constrains.md",
+                "file": "Формы Django/_формы моделей Django.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Модели Django/ограничения базы данных Constrains.md",
+                "file": "Формы Django/_формы моделей Django.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Модели Django/ограничения базы данных Constrains.md",
+                "file": "Формы Django/_формы моделей Django.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Модели Django/ограничения базы данных Constrains.md"
+                "file": "Формы Django/_формы моделей Django.md"
               }
             }
           }
@@ -173,6 +173,7 @@
   },
   "active": "5fd997869759e26e",
   "lastOpenFiles": [
+    "Модели Django/ограничения базы данных Constrains.md",
     "Дополнителные модули/django-crispy-forms.md",
     "Модели Django/_модели Django.md",
     "запросы Django/функции базы данных.md",
