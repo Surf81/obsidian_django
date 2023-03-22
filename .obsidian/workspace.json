@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "сайт на Django/1. Установка и настройка Django.md",
+                "file": "сайт на Django/_Памятка по командам.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5fd997869759e26e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Модели Django/ограничения базы данных Constrains.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "сайт на Django/1. Установка и настройка Django.md",
+                "file": "Модели Django/ограничения базы данных Constrains.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "сайт на Django/1. Установка и настройка Django.md",
+                "file": "Модели Django/ограничения базы данных Constrains.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "сайт на Django/1. Установка и настройка Django.md"
+                "file": "Модели Django/ограничения базы данных Constrains.md"
               }
             }
           }
@@ -159,14 +171,21 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "42264b53f206bb77",
+  "active": "5fd997869759e26e",
   "lastOpenFiles": [
-    "Создание сайта/Памятка по командам.md",
-    "Создание сайта/Полезные ссылки.md",
-    "Создание сайта/Создание сайта.md",
+    "Дополнителные модули/django-crispy-forms.md",
+    "Модели Django/_модели Django.md",
+    "запросы Django/функции базы данных.md",
+    "запросы Django/Менеджеры.md",
+    "сайт на Django/_Памятка по командам.md",
+    "сайт на Django/Создание сайта.md",
+    "сайт на Django/_сайт на Django.md",
+    "сайт на Django/3. Добавление приложений.md",
+    "сайт на Django/2. Debug toolbar.md",
+    "сайт на Django/1. Установка и настройка Django.md",
+    "_Полезные ссылки/Полезные ссылки.md",
     "Формы Django/Fields - поля формы.md",
     "Формы Django/_формы моделей Django.md",
-    "Модели Django/_модели Django.md",
     "Модели Django/Поля модели - Поля данных.md",
     "Модели Django/Поля модели - ForeignKey.md",
     "Модели Django/Поля модели - Опции полей.md",
@@ -174,9 +193,6 @@
     "Валидация",
     "Модели Django/class Meta.md",
     "Формы Django",
-    "сайт на Django/1. Установка и настройка Django.md",
-    "сайт на Django/_сайт на Django.md",
-    "сайт на Django/3. Добавление приложений.md",
     "Модели Django/Поля модели - ManyToManyField.md"
   ]
 }
