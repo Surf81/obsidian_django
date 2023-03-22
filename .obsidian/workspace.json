@@ -1,0 +1,182 @@
+{
+  "main": {
+    "id": "d72f22a336b8e476",
+    "type": "split",
+    "children": [
+      {
+        "id": "0d9384a1fac5bbaf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "387d8a6c1ca511a1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Формы Django/_формы моделей Django.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "42264b53f206bb77",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Формы Django/Fields - поля формы.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "535593b7e8f719ca",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3ee4711f6080f62",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bc71e469a62c2b18",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "49fc1eea41335bf6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "85ff078cc996f7a0",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 343.5
+  },
+  "right": {
+    "id": "74f8e255c7476012",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7172535eded3531",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e02a19210f3e1d20",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Формы Django/Fields - поля формы.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f71cc620cb4373fe",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Формы Django/Fields - поля формы.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ff1e463cd166a2aa",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "713d6a3ba6ee050d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Формы Django/Fields - поля формы.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "canvas:Создать новый холст": false,
+      "switcher:Меню быстрого перехода": false,
+      "graph:Граф": false,
+      "daily-notes:Сегодняшняя заметка": false,
+      "templates:Вставить шаблон": false,
+      "command-palette:Открыть палитру команд": false
+    }
+  },
+  "active": "42264b53f206bb77",
+  "lastOpenFiles": [
+    "Формы Django/_формы моделей Django.md",
+    "Модели Django/_модели Django.md",
+    "Модели Django/Поля модели - Поля данных.md",
+    "Модели Django/Поля модели - ForeignKey.md",
+    "Модели Django/Поля модели - Опции полей.md",
+    "Формы Django/Fields - поля формы.md",
+    "Валидация/сообщения об ошибках валидации.md",
+    "Валидация",
+    "Модели Django/class Meta.md",
+    "Формы Django",
+    "сайт на Django/1. Установка и настройка Django.md",
+    "сайт на Django/_сайт на Django.md",
+    "сайт на Django/3. Добавление приложений.md",
+    "Создание сайта/Создание сайта.md",
+    "Создание сайта/Памятка по командам.md",
+    "Создание сайта/Полезные ссылки.md",
+    "Модели Django/Поля модели - ManyToManyField.md"
+  ]
+}
