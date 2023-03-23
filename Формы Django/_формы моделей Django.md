@@ -125,6 +125,15 @@ class ClassForm(ModelForm):
 		widgets = {
 			'field1': Select(attrs={'size': 8})
 		}
+
+# Валидация
+	def clean_field1(self):
+		val = self.cleaned_data['field1']
+		if val = 'Прошлогодний снег':
+			raise ValidationError('К продаже не допускается')
+		return val.capitalize() # Возвращенное в поле значение будет с большой буквы
+
+
 ...
 class MyCreateView(CreateView):
 	form_class = ClassForm
@@ -164,7 +173,7 @@ if form.is_valid():
 	m.save()
 	form.save_m2m() # Для создания связи многие-со-многими
 
-
+form.cleaned_data # Словарь, в который помещаются отвалидированные значения
 ```
 
 ## [Коды ошибок валидации](../Валидация/сообщения%20об%20ошибках%20валидации.md)
