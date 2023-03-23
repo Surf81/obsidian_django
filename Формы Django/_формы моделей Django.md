@@ -86,6 +86,7 @@ class MyCreateView(CreateView):
 from django.forms.models import ModelForm
 from django.forms.fields import DecimalField, CharField
 from django.forms.widgets import Select, Textarea
+from django.core.exeptions import ValidationError
 from .models import MyModel1, MyModel2
 
 class ClassForm(ModelForm):
@@ -95,7 +96,13 @@ class ClassForm(ModelForm):
 				queryset=MyModel2.objects.all(),
 				label='Поле 2',
 				help_text='Подсказка',
-				widget=Select(attrs={'size': 8})
+				label_suffix=":",
+				validators = [...],
+				initial="",
+				required=False,
+				widget=Select(attrs={'size': 8}),
+				error_messages={},
+				disa
 			 )
 	# Можно так же объявить дополнительные поля, отсутствующие в модели:
 	new_field = CharField(label='new field')
@@ -127,12 +134,21 @@ class ClassForm(ModelForm):
 		}
 
 # Валидация
-	def clean_field1(self):
+	def clean_field1(self): # Валидация отдельного поля
 		val = self.cleaned_data['field1']
 		if val = 'Прошлогодний снег':
 			raise ValidationError('К продаже не допускается')
 		return val.capitalize() # Возвращенное в поле значение будет с большой буквы
 
+	def clean(self): # Валидация формы в целом
+		super().clean() # Заполняет cleaned_data
+		errors = {}
+		if not self.cleaned_data['field2']:
+			errors['field2'] = ValidationError("Не заполнено поле field2")
+		if self.cleaned_data['price'] < 0:
+			errors['price'] = ValidationError("Отрицательная цена")
+		if errors:
+			raise ValidationError(errors)
 
 ...
 class MyCreateView(CreateView):
