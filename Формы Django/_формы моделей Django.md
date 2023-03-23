@@ -125,6 +125,8 @@ class ClassForm(ModelForm):
 		widgets = {
 			'field1': Select(attrs={'size': 8})
 		}
+
+
 ...
 class MyCreateView(CreateView):
 	form_class = ClassForm

@@ -7,28 +7,30 @@
 |Тип поля|Назначение|
 |---|---|
 |[`CharField()`](#`CharField()`)|Строковое или текстовое поле|
-|EmailField|Электронная почта в строковом виде|
-|URLField|Интернет-адрес в виде строки|
-|SlugField|Слаг|
-|RegexField|Строковое значение, совпадающее в регулярным выражением|
-|BooleanField|Логическое поле|
-|NullBooleanField|Логическое поле с возможностью хранения значения null|
-|IntegerField|Знаковое целочисленное поле (32 разряда)|
-|FloatField|Вещественное число|
-|DecimslField|Вещественное число фиксированной точности из модуля `decimal` Python|
-|DateField|Значение даты типа `date` из модуля `datetime` Python|
-|DateTimeField|Объект типа `datetime` из модуля `datetime`|
-|TimeField|Объект типа `time` из модуля `datetime`|
-|SplitDateTimeField|То же что и DateTimeField, но для внесения даты и времени используются разные элементы формы|
-|DurationField|Промежуток времени, объект типа `timedelta` из модуля `datetime` Python|
-|ModelChoiceField|Поле внешнего ключа вторичной модели связей один-со-многими или один-с-одним. Позволяет выбрать только одну запись|
-|ModelMultipleChoiceField|поле внешнего ключа ведущей модели связи многие-со-многими. Позволяет выбрать несколько записей|
-|ChoiceField|Поле со списком. Выбор из ограниченного списка значений в строковом формате|
-|TypedChoiceField|То же самое, что ChoiceField, позволяющее хранить любое значение, а не только строкового|
-|MultipleChoiceField|То же что ChoiceField, но позволяет выбрать несколько пунктов|
-|TypedMultipleChoiceField|То же, что и TypedChoiceField, но позволяет выбрать несколько пунктов|
-|GenericIPAddressField|IP-адрес в виде строки|
-|UUIDField|Строка значения объекта типа `UUID` из модуля `uuid` Python|
+|[`EmailField()`](#`EmailField()`)|Электронная почта в строковом виде|
+|[`URLField()`](#`URLField()`)|Интернет-адрес в виде строки|
+|[`SlugField()`](#`SlugField()`)|Слаг|
+|[`RegexField()`](#`RegexField()`)|Строковое значение, совпадающее в регулярным выражением|
+|[`BooleanField()`](#`BooleanField()`)|Логическое поле|
+|[`NullBooleanField()`](#`NullBooleanField()`)|Логическое поле с возможностью хранения значения null|
+|[`IntegerField()`](#`IntegerField()`)|Знаковое целочисленное поле (32 разряда)|
+|[`FloatField()`](#`FloatField()`)|Вещественное число|
+|[`DecimalField()`](#`DecimalField()`)|Вещественное число фиксированной точности из модуля `decimal` Python|
+|[`DateField()`](#`DateField()`)|Значение даты типа `date` из модуля `datetime` Python|
+|[`DateTimeField()`](#`DateTimeField()`)|Объект типа `datetime` из модуля `datetime`|
+|[`TimeField()`](#`TimeField()`)|Объект типа `time` из модуля `datetime`|
+|[`SplitDateTimeField()`](#`SplitDateTimeField()`)|То же что и DateTimeField, но для внесения даты и времени используются разные элементы формы|
+|[`DurationField()`](#`DurationField()`)|Промежуток времени, объект типа `timedelta` из модуля `datetime` Python|
+|[`ModelChoiceField()`](#`ModelChoiceField()`)|Поле внешнего ключа вторичной модели связей один-со-многими или один-с-одним. Позволяет выбрать только одну запись|
+|[`ModelMultipleChoiceField()`](#`ModelMultipleChoiceField()`)|поле внешнего ключа ведущей модели связи многие-со-многими. Позволяет выбрать несколько записей|
+|[`ChoiceField()`](#`ChoiceField()`)|Поле со списком. Выбор из ограниченного списка значений в строковом формате|
+|[`TypedChoiceField()`](#`TypedChoiceField()`)|То же самое, что ChoiceField, позволяющее хранить любое значение, а не только строкового|
+|[`MultipleChoiceField()`](#`MultipleChoiceField()`)|То же что ChoiceField, но позволяет выбрать несколько пунктов|
+|[`TypedMultipleChoiceField()`](#`TypedMultipleChoiceField()`)|То же, что и TypedChoiceField, но позволяет выбрать несколько пунктов|
+|[`GenericIPAddressField()`](#`GenericIPAddressField()`)|IP-адрес в виде строки|
+|[`UUIDField()`](#`UUIDField()`)|Строка значения объекта типа `UUID` из модуля `uuid` Python|
+|[`ComboField()`](#`ComboField()`)||
+|[`MultiValueField()`](#`MultiValueField()`)||
 
 ## Общие параметры для всех типов полей
 ---
@@ -194,4 +196,9 @@ KINDS = (
 - `inpack_ipv4` - если `True` то IP-адреса IPv6 будут предобразовываться в IPv4. Учитывается только если protocol="both"
 
 ### `UUIDField()`
->
+>Уникальный универсальный идентификатор, представленный объектом типа `UUID` из модуля `uuid` Python, в виде строки
+- [общие параметры](#Общие%20параметры%20для%20всех%20типов%20полей)
+
+### `ComboField()`
+
+### `MultiValueField()`

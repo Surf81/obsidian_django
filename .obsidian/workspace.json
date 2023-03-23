@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Формы Django/Fields - поля формы.md",
+                "file": "Формы Django/_формы моделей Django.md",
                 "mode": "source",
                 "source": false
               }
@@ -97,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Формы Django/Fields - поля формы.md",
+                "file": "Формы Django/_формы моделей Django.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Формы Django/Fields - поля формы.md",
+                "file": "Формы Django/_формы моделей Django.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Формы Django/Fields - поля формы.md"
+                "file": "Формы Django/_формы моделей Django.md"
               }
             }
           }
@@ -160,6 +160,7 @@
   },
   "active": "387d8a6c1ca511a1",
   "lastOpenFiles": [
+    "Формы Django/Fields - поля формы.md",
     "Формы Django/_формы моделей Django.md",
     "сайт на Django/_Памятка по командам.md",
     "Модели Django/ограничения базы данных Constrains.md",
@@ -173,7 +174,6 @@
     "сайт на Django/2. Debug toolbar.md",
     "сайт на Django/1. Установка и настройка Django.md",
     "_Полезные ссылки/Полезные ссылки.md",
-    "Формы Django/Fields - поля формы.md",
     "Модели Django/Поля модели - Поля данных.md",
     "Модели Django/Поля модели - ForeignKey.md",
     "Модели Django/Поля модели - Опции полей.md",
