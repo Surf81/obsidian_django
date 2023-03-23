@@ -102,7 +102,7 @@ class ClassForm(ModelForm):
 				required=False,
 				widget=Select(attrs={'size': 8}),
 				error_messages={},
-				disa
+				disabled=False
 			 )
 	# Можно так же объявить дополнительные поля, отсутствующие в модели:
 	new_field = CharField(label='new field')
@@ -161,9 +161,6 @@ class MyCreateView(CreateView):
 ```python
 from django.core.exeptions import NON_FIELDS_ERRORS
 
-class ClassForm(ModelForm):
-	pass
-
 form = ClassForm(request.POST)
 
 # Валидация
@@ -190,6 +187,26 @@ if form.is_valid():
 	form.save_m2m() # Для создания связи многие-со-многими
 
 form.cleaned_data # Словарь, в который помещаются отвалидированные значения
+```
+
+## Изменение записи с помощью формы
+---
+```python
+def edit(request, pk):
+	bb = Bb.objects.get(pk=pk)
+	if request.method == 'POST':
+		bbf = BbForm(request.POST, instance=bb) # Сохранение в существующую запись
+		if bbf.is_valid():
+			bbf.save()
+			return HttpResponseRedirect(...)
+		else:
+			context = {'form': bbf}
+			return render(request, 'template.html', context)
+	elif request.method == 'GET':
+		bbf = Form(instance=bb) # заполнить данные формы из объекта модели
+		context = {'form': bbf}
+		return render(request, 'template.html', context)
+		
 ```
 
 ## [Коды ошибок валидации](../Валидация/сообщения%20об%20ошибках%20валидации.md)
