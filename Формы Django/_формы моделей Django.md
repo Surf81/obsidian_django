@@ -125,13 +125,31 @@ class ClassForm(ModelForm):
 		widgets = {
 			'field1': Select(attrs={'size': 8})
 		}
-
-
 ...
 class MyCreateView(CreateView):
 	form_class = ClassForm
 ```
 
+
+## Объект формы
+---
+```python
+from django.core.exeptions import NON_FIELDS_ERRORS
+
+class ClassForm(ModelForm):
+	pass
+
+form = ClassForm()
+form.is_valid() # `True` если валидация прошла успешно
+form.errors # Словарь с ошибками валидации
+form.errors['field1'] # Ошибки поля 1
+form.errors[NON_FIELDS_ERRORS] # Ошибки, относящиеся ко всей форме
+form.save() # Сохранить данные в связанную с моделью форму
+f = form.save(commit=False) # Возвращает созданную, но еще не сохраненную запись модели
+```
+
 ## [Коды ошибок валидации](../Валидация/сообщения%20об%20ошибках%20валидации.md)
 
 ## [Типы полей формы](Fields%20-%20поля%20формы.md)
+
+
