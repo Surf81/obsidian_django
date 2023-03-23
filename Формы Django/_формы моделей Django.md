@@ -139,13 +139,32 @@ from django.core.exeptions import NON_FIELDS_ERRORS
 class ClassForm(ModelForm):
 	pass
 
-form = ClassForm()
+form = ClassForm(request.POST)
+
+# Валидация
 form.is_valid() # `True` если валидация прошла успешно
 form.errors # Словарь с ошибками валидации
 form.errors['field1'] # Ошибки поля 1
 form.errors[NON_FIELDS_ERRORS] # Ошибки, относящиеся ко всей форме
+
 form.save() # Сохранить данные в связанную с моделью форму
+
 f = form.save(commit=False) # Возвращает созданную, но еще не сохраненную запись модели
+							# для возможности проверки значений полей или изменения
+if not f.title:
+	f.title = '123'
+f.save()	
+
+# Если в модели используется связь многие со многими и нужно применить
+# save(commit=False)
+form = MyForm(request.POST)
+if form.is_valid():
+	m = form.save(commit=False)
+	# какие-то действия
+	m.save()
+	form.save_m2m() # Для создания связи многие-со-многими
+
+
 ```
 
 ## [Коды ошибок валидации](../Валидация/сообщения%20об%20ошибках%20валидации.md)
