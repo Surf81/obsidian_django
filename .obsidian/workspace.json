@@ -20,6 +20,18 @@
             }
           },
           {
+            "id": "fc18b2ed15cb8e3f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "представления Views/Пагинатор.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "42264b53f206bb77",
             "type": "leaf",
             "state": {
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -97,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Формы Django/_формы моделей Django.md",
+                "file": "представления Views/Пагинатор.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Формы Django/_формы моделей Django.md",
+                "file": "представления Views/Пагинатор.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -137,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Формы Django/_формы моделей Django.md"
+                "file": "представления Views/Пагинатор.md"
               }
             }
           }
@@ -158,10 +171,12 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "387d8a6c1ca511a1",
+  "active": "fc18b2ed15cb8e3f",
   "lastOpenFiles": [
-    "Формы Django/Fields - поля формы.md",
     "Формы Django/_формы моделей Django.md",
+    "представления Views/Пагинатор.md",
+    "представления Views",
+    "Формы Django/Fields - поля формы.md",
     "сайт на Django/_Памятка по командам.md",
     "Модели Django/ограничения базы данных Constrains.md",
     "Дополнителные модули/django-crispy-forms.md",
