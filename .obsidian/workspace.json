@@ -49,7 +49,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "представления Views/классы-представления.md",
+                "file": "Формы Django/Fields - поля формы.md",
                 "mode": "source",
                 "source": false
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "представления Views/классы-представления.md",
+                "file": "Формы Django/Fields - поля формы.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "представления Views/классы-представления.md",
+                "file": "Формы Django/Fields - поля формы.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "представления Views/классы-представления.md"
+                "file": "Формы Django/Fields - поля формы.md"
               }
             }
           }
@@ -197,8 +197,8 @@
   },
   "active": "847ed1965de8ec60",
   "lastOpenFiles": [
-    "представления Views/функция-представление.md",
     "представления Views/классы-представления.md",
+    "представления Views/функция-представление.md",
     "представления Views/Пагинатор.md",
     "Формы Django/_формы моделей Django.md",
     "представления Views",
