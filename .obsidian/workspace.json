@@ -4,71 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "0d9384a1fac5bbaf",
+        "id": "236857862c4a75ce",
         "type": "tabs",
         "children": [
           {
-            "id": "387d8a6c1ca511a1",
+            "id": "ab71dfbe4a27c949",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Формы Django/_формы моделей Django.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "fc18b2ed15cb8e3f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "представления Views/Пагинатор.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "1b3bdd6882c7b5b8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "представления Views/функция-представление.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "847ed1965de8ec60",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Формы Django/Fields - поля формы.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "42264b53f206bb77",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "сайт на Django/_Памятка по командам.md",
+                "file": "представления Views/классы-представления.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -134,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Формы Django/Fields - поля формы.md",
+                "file": "представления Views/классы-представления.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Формы Django/Fields - поля формы.md",
+                "file": "представления Views/классы-представления.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Формы Django/Fields - поля формы.md"
+                "file": "представления Views/классы-представления.md"
               }
             }
           }
@@ -195,15 +146,15 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "847ed1965de8ec60",
+  "active": "ab71dfbe4a27c949",
   "lastOpenFiles": [
-    "представления Views/классы-представления.md",
-    "представления Views/функция-представление.md",
-    "представления Views/Пагинатор.md",
     "Формы Django/_формы моделей Django.md",
-    "представления Views",
-    "Формы Django/Fields - поля формы.md",
+    "представления Views/Пагинатор.md",
     "сайт на Django/_Памятка по командам.md",
+    "представления Views/функция-представление.md",
+    "Формы Django/Fields - поля формы.md",
+    "представления Views/классы-представления.md",
+    "представления Views",
     "Модели Django/ограничения базы данных Constrains.md",
     "Дополнителные модули/django-crispy-forms.md",
     "Модели Django/_модели Django.md",
