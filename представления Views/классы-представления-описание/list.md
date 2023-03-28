@@ -35,12 +35,29 @@
 context = {
 	'view': self,
 	'paginator': None или экземпляр класса self.paginator_class,
-	'page_obj': None или экземпляр класса Page(),
-	'is_paginated': True
+	'page_obj': None или экземпляр класса Page() с записами текущей страницы,
+	'is_paginated': True если применяется пагинатор или False,
+	'object_list': queryset cо всеми записями,
+	<get_context_object_name()>: Альтернативное хранилище object_list
 	**self.extra_context,
 	**kwargs # kwargs, переданные в get_context_data()
 }
 ```
 
+## примесь `MultipleObjectTemplateResponseMixin()`
+---
+>django.views.generic.list
 
+Атрибуты:
+|атрибут|описание|
+|---|---|
+|`template_name`|[`TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
+|`template_engine`|[`TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
+|`response_class`|[`TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
+|`content_type`|[`TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
 
+Методы:
+|метод|описание|
+|---|---|
+|`get_template_names()`|Вызывается из `self.render_to_response()`. Возвращает список имен шаблонов. Если указан `self.template_name`, возвращает список из одного элемента, содержащего значение `self.template_name`<br>Иначе возврашает список из имени шаблона, указанного в поле модели с именем `self.template_name_field` (при наличии), а так же `<имя приложения>/<имя модели>_<суффикс>.html`, где суффикс, это значение `self.template_name_suffix`|
+|`render_to_response(context, **response_kwargs)`|[`TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
