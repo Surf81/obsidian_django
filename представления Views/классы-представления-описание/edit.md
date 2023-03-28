@@ -17,12 +17,12 @@
 |метод|описание|
 |---|---|
 |`get_initial()`|Вызывается из `self.get_form()`. Возвращает значение `self.initial` для передачи в создаваемую форму (значения полей формы по умолчанию|
-|`get_prefix()`|Вызывается из `self.get_form_kwargs()`. Возвращает значение `self.prefix`|
-|`get_form_class()`||
-|`get_form(form_class=None)`||
-|`get_form_kwargs()`||
-|`get_success_url()`||
-|`form_valid()`||
+|`get_prefix()`|Вызывается из `self.get_form_kwargs()`. Возвращает значение `self.prefix` для передачи в параметры формы|
+|`get_form_class()`|Вызывается из `self.get_form()`. Возвращает значение `self.form_class`|
+|`get_form(form_class=None)`|Вызывается из `self.get_context_data()` если параметр `form` не передан из обработчика метода HTTP-запроса. Возвращает объект формы|
+|`get_form_kwargs()`|Вызывается из `self.get_form()`. Возвращает данные для заполнения формы.|
+|`get_success_url()`|Вызывается из `self.form_valid()`. Возвращает строку с адресом URL из `self.success_url`|
+|`form_valid()`|Вызывается из обработчика метода HTTP-запроса `POST` в случае подстверждения валидности формы. Возвращает |
 |`form_invalid()`||
 |`get_context_data()`||
 
