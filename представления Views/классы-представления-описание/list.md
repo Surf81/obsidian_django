@@ -1,6 +1,6 @@
 [примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)
 [примесь `MultipleObjectTemplateResponseMixin()`](#примесь%20`MultipleObjectTemplateResponseMixin()`)
-
+[класс `ListView()`](#класс%20`ListView()`)
 
 ## примесь `MultipleObjectMixin()`
 ---
@@ -9,7 +9,7 @@
 Настраиваемые атрибуты:
 |атрибут|описание|
 |---|---|
-|`extra_context`|[`ContextMixin()`](классы-представления-описание/base.md#Примесь%20`ContextMixin()`)|
+|`extra_context`|[примесь `ContextMixin()`](классы-представления-описание/base.md#Примесь%20`ContextMixin()`)|
 |`allow_empty`|Если `True` - пагинатору разрешено создавать страницу, даже если отсустствуют объекты для вывода. Если `False` выйдет страница 404. По умолчанию `True`. Используется если задан `self.paginate_by`|
 |`queryset`|Имеет приоритет перед `self.model`. Может быть указан объект типа `Manager()` или `QuerySet()` из которого `self.get_queryset()` будет возвращать все записи методом `self.queryset.all()`. По умолчанию `None`<br>Игнорируется если в `self.get_context_data()` передан object_list|
 |`model`|Указывается ссылка на класс модели, из которой `self.get_queryset()` будет возращать все записи методом `self.model._default_manager.all()`, если не задан атрибут `self.queryset`. По умолчанию `None`<br>Игнорируется если в `self.get_context_data()` передан object_list|
@@ -32,7 +32,6 @@
 |`get_allow_empty()`|Вызывается из `self.paginate_sueryset()`. Возвращает значение `self.allow_empty`|
 |`get_context_object_name(object_list)`|Вызывается из `self.get_context_data()`. Задает в контексте альтернативное имя ключу `object_list`, в котором хранится queryset. Альтернативным именем будет являться занчение, указанное в параметре `self.context_object_name`, а если оно не задано, тогда имя модели `obj._meta.model_name+"_list"`|
 |`get_context_data(request, **kwargs)`|Вызывается из методов `self.get()`, `self.post()` и прочих. Формирует справочник `context`, который затем будет передаваться в шаблон.<br>По умолчанию контекст содержит одно значение `view`, содержащее instance класса-контроллера. Так же в контекст добавляются значения `**kwargs` (из маршрутизатора) и `self.extra_context`, а так же атрибуты: `paginator`, `page_obj`, `is_paginated`, `object_list` и атрибут с именем, возвращаемым `self.get_context_object_name()`|
-
 ```python
 context = {
 	'view': self,
@@ -53,16 +52,16 @@ context = {
 Атрибуты:
 |атрибут|описание|
 |---|---|
-|`template_name`|[`TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
-|`template_engine`|[`TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
-|`response_class`|[`TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
-|`content_type`|[`TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
+|`template_name`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
+|`template_engine`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
+|`response_class`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
+|`content_type`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
 
 Методы:
 |метод|описание|
 |---|---|
 |`get_template_names()`|Вызывается из `self.render_to_response()`. Возвращает список имен шаблонов. Если указан `self.template_name`, возвращает список из одного элемента, содержащего значение `self.template_name`<br>Иначе возврашает список из одного значения `<имя приложения>/<имя модели>_list.html`|
-|`render_to_response(context, **response_kwargs)`|[`TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
+|`render_to_response(context, **response_kwargs)`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
 
 ## класс `ListView()`
 ---
@@ -72,7 +71,7 @@ context = {
 |атрибут|описание|
 |---|---|
 |`http_method_names`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
-|`extra_context`|[`ContextMixin()`](классы-представления-описание/base.md#Примесь%20`ContextMixin()`)|
+|`extra_context`|[примесь `ContextMixin()`](классы-представления-описание/base.md#Примесь%20`ContextMixin()`)|
 |`allow_empty`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
 |`queryset`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
 |`model`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
@@ -82,6 +81,10 @@ context = {
 |`paginator_class`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
 |`page_kwarg`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
 |`ordering`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`template_name`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
+|`template_engine`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
+|`response_class`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
+|`content_type`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
 
 Доступные атрибуты:
 |атрибут|описание|
@@ -89,7 +92,7 @@ context = {
 |`request`|устанавливается методом `self.setup()`|
 |`args`|устанавливается методом `self.setup()`|
 |`kwargs`|устанавливается методом `self.setup()`|
-|`object`|устанавливается методом `self.get()`|
+|`object_list`|устанавливается методом `self.get()`|
 
 Методы:
 |метод|описание|
@@ -100,7 +103,7 @@ context = {
 |`dispatch(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
 |`http_method_not_allowed(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
 |`options(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
-|`get(request, *args, **kwargs)`|Определен в `BaseDetailView()`. Возвращает HTTP-ответ подготовленный методом `self.render_to_response()` с контекстом из `self.get_context_data()` для передачи браузеру в метод `self.dispatch()`. Заполняет атрибут класса `self.object`, который берется из `self.get_object()`|
+|`get(request, *args, **kwargs)`|Определен в `BaseListView()`. Возвращает HTTP-ответ подготовленный методом `self.render_to_response()` с контекстом из `self.get_context_data()` для передачи браузеру в метод `self.dispatch()`. Заполняет атрибут класса `self.object_list`, который берется из `self.get_queryset()`|
 |`get_queryset()`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
 |`get_ordering()`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
 |`paginate_queryset(queryset, page_size)`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
@@ -110,4 +113,18 @@ context = {
 |`get_allow_empty()`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
 |`get_context_object_name(object_list)`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
 |`get_context_data(request, **kwargs)`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`get_template_names()`|[примесь `MultipleObjectTemplateResponseMixin()`](#примесь%20`MultipleObjectTemplateResponseMixin()`)|
+|`render_to_response(context, **response_kwargs)`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
+```python
+context = {
+	'view': self,
+	'paginator': None или экземпляр класса self.paginator_class,
+	'page_obj': None или экземпляр класса Page() с записами текущей страницы,
+	'is_paginated': True если применяется пагинатор или False,
+	'object_list': queryset cо всеми записями,
+	<get_context_object_name()>: Альтернативное хранилище object_list
+	**self.extra_context,
+	**kwargs # kwargs, переданные в get_context_data()
+}
+```
 

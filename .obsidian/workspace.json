@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "представления Views/классы-представления-описание/detail.md",
+                "file": "представления Views/классы-представления.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,8 +31,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -98,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "представления Views/классы-представления-описание/list.md",
+                "file": "представления Views/классы-представления.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "представления Views/классы-представления-описание/list.md",
+                "file": "представления Views/классы-представления.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "представления Views/классы-представления-описание/list.md"
+                "file": "представления Views/классы-представления.md"
               }
             }
           }
@@ -159,11 +158,11 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "91fe6e9ce8efb14f",
+  "active": "ab71dfbe4a27c949",
   "lastOpenFiles": [
-    "представления Views/классы-представления-описание/detail.md",
-    "представления Views/классы-представления.md",
     "представления Views/классы-представления-описание/list.md",
+    "представления Views/классы-представления.md",
+    "представления Views/классы-представления-описание/detail.md",
     "представления Views/классы-представления-описание/base.md",
     "представления Views/классы-представления-описание",
     "Формы Django/_формы моделей Django.md",
