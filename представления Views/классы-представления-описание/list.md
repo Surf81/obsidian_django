@@ -1,4 +1,6 @@
 [примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)
+[примесь `MultipleObjectTemplateResponseMixin()`](#примесь%20`MultipleObjectTemplateResponseMixin()`)
+
 
 ## примесь `MultipleObjectMixin()`
 ---
@@ -59,5 +61,53 @@ context = {
 Методы:
 |метод|описание|
 |---|---|
-|`get_template_names()`|Вызывается из `self.render_to_response()`. Возвращает список имен шаблонов. Если указан `self.template_name`, возвращает список из одного элемента, содержащего значение `self.template_name`<br>Иначе возврашает список из имени шаблона, указанного в поле модели с именем `self.template_name_field` (при наличии), а так же `<имя приложения>/<имя модели>_<суффикс>.html`, где суффикс, это значение `self.template_name_suffix`|
+|`get_template_names()`|Вызывается из `self.render_to_response()`. Возвращает список имен шаблонов. Если указан `self.template_name`, возвращает список из одного элемента, содержащего значение `self.template_name`<br>Иначе возврашает список из одного значения `<имя приложения>/<имя модели>_list.html`|
 |`render_to_response(context, **response_kwargs)`|[`TemplateResponseMixin()`](классы-представления-описание/base.md#Примесь%20`TemplateResponseMixin()`)|
+
+## класс `ListView()`
+---
+>django.views.generic.list
+
+Настраиваемые атрибуты:
+|атрибут|описание|
+|---|---|
+|`http_method_names`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`extra_context`|[`ContextMixin()`](классы-представления-описание/base.md#Примесь%20`ContextMixin()`)|
+|`allow_empty`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`queryset`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`model`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`paginate_by`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`paginate_orphans`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`context_object_name`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`paginator_class`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`page_kwarg`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`ordering`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+
+Доступные атрибуты:
+|атрибут|описание|
+|---|---|
+|`request`|устанавливается методом `self.setup()`|
+|`args`|устанавливается методом `self.setup()`|
+|`kwargs`|устанавливается методом `self.setup()`|
+|`object`|устанавливается методом `self.get()`|
+
+Методы:
+|метод|описание|
+|---|---|
+|`__init__(**kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`as_view(**initkwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`setup(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`dispatch(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`http_method_not_allowed(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`options(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`get(request, *args, **kwargs)`|Определен в `BaseDetailView()`. Возвращает HTTP-ответ подготовленный методом `self.render_to_response()` с контекстом из `self.get_context_data()` для передачи браузеру в метод `self.dispatch()`. Заполняет атрибут класса `self.object`, который берется из `self.get_object()`|
+|`get_queryset()`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`get_ordering()`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`paginate_queryset(queryset, page_size)`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`get_paginate_by(queryset)`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`get_paginator(queryset, per_page, orphans=0, allow_empty_first_page=True, **kwargs)`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`get_paginate_orphans()`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`get_allow_empty()`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`get_context_object_name(object_list)`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+|`get_context_data(request, **kwargs)`|[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)|
+
