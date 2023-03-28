@@ -10,7 +10,7 @@
 Атрибуты:
 |атрибут|описание|
 |---|---|
-|`extra_context`|[примесь `ContextMixin()`](#примесь%20`ContextMixin()`)|
+|`extra_context`|[примесь `ContextMixin()`](классы-представления-описание/base.md#примесь%20`ContextMixin()`)|
 |`queryset`|Имеет приоритет перед `self.model`. Может быть указан объект типа `Manager()` или `QuerySet()` из которого `self.get_queryset()` будет возвращать все записи методом `self.queryset.all()`. По умолчанию `None`<br>Игнорируется если в `self.get_object()` передан queryset|
 |`model`|Указывается ссылка на класс модели, из которой `self.get_queryset()` будет возращать все записи методом `self.model._default_manager.all()`, если не задан атрибут `self.queryset`. По умолчанию `None`<br>Игнорируется если в `self.get_object()` передан queryset|
 |`slug_field`|Значение (строка), которое возвращается методом `self.get_slug_field()`. По умолчанию "slug" - имя поля модели, в котором хранится слаг|
@@ -44,10 +44,10 @@ context = {
 Атрибуты:
 |атрибут|описание|
 |---|---|
-|`template_name`|[примесь `TemplateResponseMixin()`](#примесь%20`TemplateResponseMixin()`) Если не указан, применяются `template_name_field` и `template_name_suffix`|
-|`template_engine`|[примесь `TemplateResponseMixin()`](#примесь%20`TemplateResponseMixin()`)|
-|`response_class`|[примесь `TemplateResponseMixin()`](#примесь%20`TemplateResponseMixin()`)|
-|`content_type`|[примесь `TemplateResponseMixin()`](#примесь%20`TemplateResponseMixin()`)|
+|`template_name`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`) Если не указан, применяются `template_name_field` и `template_name_suffix`|
+|`template_engine`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+|`response_class`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+|`content_type`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
 |`template_name_field`|Имя поля модели, в котором хранится путь к шаблону. Проверяется если не задан атрибут `self.template_name`. По умолчанию `None`|
 |`template_name_suffix`|Конечная часть имени шаблона. Используется если не задан атрибут `self.template_name`. По умолчанию "_detail"|
 
@@ -55,7 +55,7 @@ context = {
 |метод|описание|
 |---|---|
 |`get_template_names()`|Вызывается из `self.render_to_response()`. Возвращает список имен шаблонов. Если указан `self.template_name`, возвращает список из одного элемента, содержащего значение `self.template_name`<br>Иначе возврашает список из имени шаблона, указанного в поле модели с именем `self.template_name_field` (при наличии), а так же `<имя приложения>/<имя модели>_<суффикс>.html`, где суффикс, это значение `self.template_name_suffix`|
-|`render_to_response(context, **response_kwargs)`|[примесь `TemplateResponseMixin()`](#примесь%20`TemplateResponseMixin()`)|
+|`render_to_response(context, **response_kwargs)`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
 
 ## класс `DetailView()`
 ---
@@ -64,8 +64,8 @@ context = {
 Настраиваемые атрибуты:
 |атрибут|описание|
 |---|---|
-|`http_method_names`|[класс `View()`](#класс%20`View()`)|
-|`extra_context`|[примесь `ContextMixin()`](#примесь%20`ContextMixin()`)|
+|`http_method_names`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`extra_context`|[примесь `ContextMixin()`](классы-представления-описание/base.md#примесь%20`ContextMixin()`)|
 |`queryset`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
 |`model`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
 |`slug_field`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
@@ -73,10 +73,10 @@ context = {
 |`slug_url_kwarg`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
 |`pk_url_kwarg`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
 |`query_pk_and_slug`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
-|`template_name`|[примесь `TemplateResponseMixin()`](#примесь%20`TemplateResponseMixin()`) Если не указан, применяются `template_name_field` и `template_name_suffix`|
-|`template_engine`|[примесь `TemplateResponseMixin()`](#примесь%20`TemplateResponseMixin()`)|
-|`response_class`|[примесь `TemplateResponseMixin()`](#примесь%20`TemplateResponseMixin()`)|
-|`content_type`|[примесь `TemplateResponseMixin()`](#примесь%20`TemplateResponseMixin()`)|
+|`template_name`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`) Если не указан, применяются `template_name_field` и `template_name_suffix`|
+|`template_engine`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+|`response_class`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+|`content_type`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
 |`template_name_field`|[примесь `SingleObjectTemplateResponseMixin()`](#примесь%20`SingleObjectTemplateResponseMixin()`)|
 |`template_name_suffix`|[примесь `SingleObjectTemplateResponseMixin()`](#примесь%20`SingleObjectTemplateResponseMixin()`)|
 
@@ -91,12 +91,12 @@ context = {
 Методы:
 |метод|описание|
 |---|---|
-|`__init__(**kwargs)`|[класс `View()`](#класс%20`View()`)|
-|`as_view(**initkwargs)`|[класс `View()`](#класс%20`View()`)|
-|`setup(request, *args, **kwargs)`|[класс `View()`](#класс%20`View()`)|
-|`dispatch(request, *args, **kwargs)`|[класс `View()`](#класс%20`View()`)|
-|`http_method_not_allowed(request, *args, **kwargs)`|[класс `View()`](#класс%20`View()`)|
-|`options(request, *args, **kwargs)`|[класс `View()`](#класс%20`View()`)|
+|`__init__(**kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`as_view(**initkwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`setup(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`dispatch(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`http_method_not_allowed(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`options(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
 |`get(request, *args, **kwargs)`|Определен в `BaseDetailView()`. Возвращает HTTP-ответ подготовленный методом `self.render_to_response()` с контекстом из `self.get_context_data()` для передачи браузеру в метод `self.dispatch()`. Заполняет атрибут класса `self.object`, который берется из `self.get_object()`|
 |`get_object(queryset=None)`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
 |`get_queryset()`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
@@ -104,7 +104,7 @@ context = {
 |`get_context_object_name(obj)`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
 |`get_context_data(request, **kwargs)`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
 |`get_template_names()`|[примесь `SingleObjectTemplateResponseMixin()`](#примесь%20`SingleObjectTemplateResponseMixin()`)|
-|`render_to_response(context, **response_kwargs)`|[примесь `TemplateResponseMixin()`](#примесь%20`TemplateResponseMixin()`)|
+|`render_to_response(context, **response_kwargs)`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
 ```python
 context = {
 	'view': self,

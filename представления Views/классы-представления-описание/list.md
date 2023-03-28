@@ -1,3 +1,4 @@
+[примесь `MultipleObjectMixin()`](#примесь%20`MultipleObjectMixin()`)
 
 ## примесь `MultipleObjectMixin()`
 ---
@@ -6,12 +7,12 @@
 Атрибуты:
 |атрибут|описание|
 |---|---|
-|`extra_context`|[классы-представления-описание/base.md#Примесь%20`ContextMixin()`)|
+|`extra_context`|[`ContextMixin()`](классы-представления-описание/base.md#Примесь%20`ContextMixin()`)|
 
 Методы:
 |метод|описание|
 |---|---|
-|`get_context_data(request, **kwargs)`|Вызывается из методов `self.get()`, `self.post()` и прочих. Формирует справочник `context`, который затем будет передаваться в шаблон.<br>По умолчанию контекст содержит одно значение `view`, содержащее instance класса-контроллера. Так же в контекст добавляются значения `**kwargs` (из маршрутизатора) и `self.extra_context`|
+|`get_context_data(request, **kwargs)`|[`ContextMixin()`](классы-представления-описание/base.md#Примесь%20`ContextMixin()`)|
 ```python
 context = {
 	'view': self,
@@ -19,3 +20,6 @@ context = {
 	**kwargs # kwargs, переданные в get_context_data()
 }
 ```
+
+
+
