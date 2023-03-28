@@ -22,7 +22,10 @@
 |метод|описание|
 |---|---|
 |`get_context_data(request, **kwargs)`|[`ContextMixin()`](классы-представления-описание/base.md#Примесь%20`ContextMixin()`)|
-|`get_queryset()`|Вызывается из `self.get_object()`, если в него не был передан queryset. Возвращает набор объектов из объекта `self.queryset.all()`, а если он не задан, то из `self.model._defautl_manager.all()`|
+|`get_queryset()`|Вызывается из обработчиков методов HTTP-запроса (Например `self.get()`) для задания значения параметру `self.object_list`. Возвращает набор объектов из объекта `self.queryset.all()`, а если он не задан, то из `self.model._defautl_manager.all()` и применяет к нему `order_by()` с параметром из `self.get_ordering()`|
+|`get_ordering()`|Возвращает последовательность имен полей из параметра `self.ordering`, по которым должна осуществляться сортировка в `self.get_queryset()`|
+
+
 
 
 ```python
