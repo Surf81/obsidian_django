@@ -18,8 +18,33 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "83f32b3cb0a91634",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "представления Views/классы-представления-описание/base.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "830d66260cf70687",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "представления Views/классы-представления.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -146,14 +171,17 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "ab71dfbe4a27c949",
+  "active": "830d66260cf70687",
   "lastOpenFiles": [
+    "представления Views/классы-представления-описание/base.md",
+    "представления Views/классы-представления.md",
+    "представления Views/классы-представления-описание/detail.md",
+    "представления Views/классы-представления-описание",
     "Формы Django/_формы моделей Django.md",
     "представления Views/Пагинатор.md",
     "сайт на Django/_Памятка по командам.md",
     "представления Views/функция-представление.md",
     "Формы Django/Fields - поля формы.md",
-    "представления Views/классы-представления.md",
     "представления Views",
     "Модели Django/ограничения базы данных Constrains.md",
     "Дополнителные модули/django-crispy-forms.md",
