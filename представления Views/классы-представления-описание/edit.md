@@ -1,6 +1,8 @@
 [примесь `FormMixin()`](#примесь%20`FormMixin()`)
 [класс `ProcessFormView()`](#класс%20`ProcessFormView()`)
 [класс `FormView()`](#класс%20`FormView()`)
+[примесь `ModelFormMixin()`](#примесь%20`ModelFormMixin()`)
+[класс `CreateView()`](#класс%20`CreateView()`)
 
 ## примесь `FormMixin()`
 ---
@@ -188,7 +190,7 @@ context = {
 |`form_class`|[примесь `FormMixin()`](#примесь%20`FormMixin()`) Не указывается вмести с `self.fields`|
 |`success_url`|[примесь `FormMixin()`](#примесь%20`FormMixin()`) Не обязательно указывать если у модели настроен `get_absolute_url()`|
 |`prefix`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`queryset`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`) Приоритет перед `self`|
+|`queryset`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`) Приоритет перед `self.model`|
 |`model`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`) Если не задан `self.queryset`|
 |`slug_field`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
 |`context_object_name`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
