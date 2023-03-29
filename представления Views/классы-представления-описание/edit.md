@@ -156,3 +156,4 @@ context = {
 	**kwargs # kwargs, переданные в get_context_data()
 }
 ```
+
