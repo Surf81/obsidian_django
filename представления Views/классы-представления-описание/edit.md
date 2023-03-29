@@ -336,4 +336,65 @@ context = {
 Методы:
 |метод|описание|
 |---|---|
-|`delete(request, *args, **kwargs)`|Вызывается из обработчика метода HTTP-запроса `self.post()`. Удаляет объект, полученный через `self.get_object()` и возвращает HTTP-ответ с ре|
+|`delete(request, *args, **kwargs)`|Вызывается из обработчика метода HTTP-запроса `self.post()`. Удаляет объект, полученный через `self.get_object()` и возвращает HTTP-ответ с редиректом на адрес, полученный через `self.get_success_url()`|
+|`post(request, *args, **kwargs)`|Вызывается из `self.dispatch()` и возвращает в него HTTP-ответ, полученный от `self.delete()`|
+|`get_success_url()`|Вызывается из `self.delete()`. Возвращает строку с адресом URL из `self.success_url`|
+
+
+## класс `DeleteView()`
+---
+>django.views.generic.detail
+
+Настраиваемые атрибуты:
+|атрибут|описание|
+|---|---|
+|`http_method_names`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`extra_context`|[примесь `ContextMixin()`](классы-представления-описание/base.md#примесь%20`ContextMixin()`)|
+|`queryset`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
+|`model`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
+|`slug_field`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
+|`context_object_name`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
+|`slug_url_kwarg`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
+|`pk_url_kwarg`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
+|`query_pk_and_slug`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
+|`template_name`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`) Если не указан, применяются `template_name_field` и `template_name_suffix`|
+|`template_engine`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+|`response_class`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+|`content_type`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+|`template_name_field`|[примесь `SingleObjectTemplateResponseMixin()`](#примесь%20`SingleObjectTemplateResponseMixin()`)|
+|`template_name_suffix`|[примесь `SingleObjectTemplateResponseMixin()`](#примесь%20`SingleObjectTemplateResponseMixin()`)|
+
+Доступные атрибуты:
+|атрибут|описание|
+|---|---|
+|`request`|устанавливается методом `self.setup()`|
+|`args`|устанавливается методом `self.setup()`|
+|`kwargs`|устанавливается методом `self.setup()`|
+|`object`|устанавливается методом `self.get()`|
+
+Методы:
+|метод|описание|
+|---|---|
+|`__init__(**kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`as_view(**initkwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`setup(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`dispatch(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`http_method_not_allowed(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`options(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`get(request, *args, **kwargs)`|Определен в `BaseDetailView()`. Возвращает HTTP-ответ подготовленный методом `self.render_to_response()` с контекстом из `self.get_context_data()` для передачи браузеру в метод `self.dispatch()`. Заполняет атрибут класса `self.object`, который берется из `self.get_object()`|
+|`get_object(queryset=None)`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
+|`get_queryset()`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
+|`get_slug_field()`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
+|`get_context_object_name(obj)`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
+|`get_context_data(request, **kwargs)`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
+|`get_template_names()`|[примесь `SingleObjectTemplateResponseMixin()`](#примесь%20`SingleObjectTemplateResponseMixin()`)|
+|`render_to_response(context, **response_kwargs)`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+```python
+context = {
+	'view': self,
+	'object': # Объект модели self.object
+	<context_object_name>: # Объект модели, имя атрибута из get_context_object_name()
+	**self.extra_context,
+	**kwargs # kwargs, переданные в get_context_data()
+}
+```
