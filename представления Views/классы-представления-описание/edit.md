@@ -28,8 +28,8 @@
 |`get_form(form_class=None)`|Вызывается из `self.get_context_data()` если параметр `form` не передан из обработчика метода HTTP-запроса. Возвращает объект формы|
 |`get_form_kwargs()`|Вызывается из `self.get_form()`. Возвращает данные для заполнения формы.|
 |`get_success_url()`|Вызывается из `self.form_valid()`. Возвращает строку с адресом URL из `self.success_url`|
-|`form_valid()`|Вызывается из обработчика метода HTTP-запроса `POST` в случае подтверждения валидности формы. Возвращает HTTP-ответ с редиректом на URL, полученный через `self.get_success_url()`|
-|`form_invalid()`|Вызывается из обработчика метода HTTP-запроса `POST` в случае не подтверждения валидности формы. Возвращает HTTP-ответ, возвращенный из `self.render_to_response()`|
+|`form_valid(form)`|Вызывается из обработчика метода HTTP-запроса `POST` в случае подтверждения валидности формы. Возвращает HTTP-ответ с редиректом на URL, полученный через `self.get_success_url()`. Атрибут `form` не используется|
+|`form_invalid(form)`|Вызывается из обработчика метода HTTP-запроса `POST` в случае не подтверждения валидности формы. Возвращает HTTP-ответ, возвращенный из `self.render_to_response()`|
 |`get_context_data()`|Вызывается из методов `self.get()`, `self.post()` и прочих. Формирует справочник `context`, который затем будет передаваться в шаблон.<br>По умолчанию контекст содержит одно значение `view`, содержащее instance класса-контроллера. Так же в контекст добавляются значения `**kwargs` (из маршрутизатора) и `self.extra_context` а так же атрибут `form`, содержащий объект класса формы, полученный из обработчика метода HTTP-запроса, или иначе из `self.form_class`|
 ```python
 context = {
@@ -397,7 +397,7 @@ context = {
 |`get_template_names()`|[примесь `SingleObjectTemplateResponseMixin()`](#примесь%20`SingleObjectTemplateResponseMixin()`)|
 |`render_to_response(context, **response_kwargs)`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
 |`delete(request, *args, **kwargs)`|[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)|
-|`post(request, *args, **kwargs)`|[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)|
+|`post(request, *args, **kwargs)`|Проверяет форму, полученную методом `self.get_form()` на валидность и в зависимости от результата возвращает HTTP-ответ подготовленный методом `self.form_valid()` или `self.form_invalid()`|
 |`get_success_url()`|[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)|
 |`get_initial()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_prefix()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
@@ -405,7 +405,7 @@ context = {
 |`get_form(form_class=None)`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_form_kwargs()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_success_url()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`form_valid()`|Вызывается из обработчика метода HTTP-запроса `POST` в случае подтверждения валидности формы. Возвращает HTTP-ответ с редиректом на URL, полученный через `self.get_success_url()`|
+|`form_valid(form)`|Вызывается из обработчика метода HTTP-запроса `POST` в случае подтверждения валидности формы. Удаляет объект модели. Возвращает HTTP-ответ с редиректом на URL, полученный через `self.get_success_url()`. Атрибут `form` не используется|
 |`form_invalid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_context_data()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 ```python
@@ -417,3 +417,5 @@ context = {
 	**kwargs # kwargs, переданные в get_context_data()
 }
 ```
+
+
