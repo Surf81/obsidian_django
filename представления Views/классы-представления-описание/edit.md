@@ -133,9 +133,8 @@ context = {
 |`extra_context`|[примесь `ContextMixin()`](классы-представления-описание/base.md#примесь%20`ContextMixin()`)|
 |`initial`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`form_class`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`success_url`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`success_url`|[примесь `FormMixin()`](#примесь%20`FormMixin()`) Не обязательно указывать если у модели настроен `get_absolute_url()`|
 |`prefix`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`extra_context`|[примесь `ContextMixin()`](классы-представления-описание/base.md#примесь%20`ContextMixin()`)|
 |`queryset`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
 |`model`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
 |`slug_field`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
@@ -148,7 +147,7 @@ context = {
 Настраиваемые атрибуты:
 |атрибут|описание|
 |---|---|
-|`object`|Создается после успешной валидации формы. Объект модели|
+|`object`|Создается при успешной валидации формы. Содержит объект модели|
 
 Методы:
 |метод|описание|
@@ -174,4 +173,8 @@ context = {
 	**kwargs # kwargs, переданные в get_context_data()
 }
 ```
+
+## класс `CreateView()`
+---
+>django.views.generic.edit
 
