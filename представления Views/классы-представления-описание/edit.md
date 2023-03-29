@@ -112,8 +112,42 @@ context = {
 |`form_valid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`form_invalid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_context_data()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`get_template_names()`|Возвращает список имен шаблонов для передачи в `self.render_to_response()`. По умолчанию возвращает список из одного элемента, содержащего значение `self.template_name`|
-|`render_to_response(context, **response_kwargs)`|Вызывается из методов `self.get()`, `self.post()` и т.д. Возвращает подготовленный HTTP-ответ для передачи в браузер. HTTP-ответ готовится с помощью класса, указанного в атрибуте `self.response_class`|
+|`get_template_names()`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+|`render_to_response(context, **response_kwargs)`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+```python
+context = {
+	'view': self,
+	'form': объект формы, переданный из self.post(), или иначе из self.form_class
+	**self.extra_context,
+	**kwargs # kwargs, переданные в get_context_data()
+}
+```
+
+## примесь `ModelFormMixin()`
+---
+>django.views.generic.edit
+
+Атрибуты:
+|атрибут|описание|
+|---|---|
+|`extra_context`|[примесь `ContextMixin()`](классы-представления-описание/base.md#примесь%20`ContextMixin()`)|
+|`initial`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`form_class`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`success_url`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`prefix`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+
+Методы:
+|метод|описание|
+|---|---|
+|`get_initial()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_prefix()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_form_class()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_form(form_class=None)`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_form_kwargs()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_success_url()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`form_valid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`form_invalid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_context_data()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 ```python
 context = {
 	'view': self,
