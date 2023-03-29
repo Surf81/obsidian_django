@@ -1,4 +1,6 @@
 [примесь `FormMixin()`](#примесь%20`FormMixin()`)
+[класс `ProcessFormView()`](#класс%20`ProcessFormView()`)
+[класс `FormView()`](#класс%20`FormView()`)
 
 ## примесь `FormMixin()`
 ---
@@ -38,6 +40,8 @@ context = {
 ---
 >django.views.generic.edit
 
+>Данный класс используется для наследования. Сам по себе не используется
+
 Настраиваемые атрибуты:
 |атрибут|описание|
 |---|---|
@@ -60,5 +64,9 @@ context = {
 |`http_method_not_allowed(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
 |`options(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
 |`get(request, *args, **kwargs)`|Возвращает HTTP-ответ подготовленный методом `self.render_to_response()` с контекстом из `self.get_context_data()` для передачи браузеру в метод `self.dispatch()`.|
-|`post(request, *args, **kwargs)`|
+|`post(request, *args, **kwargs)`, `put()`|Проверяет форму, полученную методом `self.get_form()` на валидность и в зависимости от результата возвращает HTTP-ответ подготовленный методом `self.form_valid()` или `self.form_invalid()`|
 
+
+## класс `FormView()`
+---
+>django.views.generic.edit
