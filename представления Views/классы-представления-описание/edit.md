@@ -64,9 +64,61 @@ context = {
 |`http_method_not_allowed(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
 |`options(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
 |`get(request, *args, **kwargs)`|Возвращает HTTP-ответ подготовленный методом `self.render_to_response()` с контекстом из `self.get_context_data()` для передачи браузеру в метод `self.dispatch()`.|
-|`post(request, *args, **kwargs)`, `put()`|Проверяет форму, полученную методом `self.get_form()` на валидность и в зависимости от результата возвращает HTTP-ответ подготовленный методом `self.form_valid()` или `self.form_invalid()`|
+|`post(request, *args, **kwargs)`,<br>`put()`|Проверяет форму, полученную методом `self.get_form()` на валидность и в зависимости от результата возвращает HTTP-ответ подготовленный методом `self.form_valid()` или `self.form_invalid()`|
 
 
 ## класс `FormView()`
 ---
 >django.views.generic.edit
+
+Настраиваемые атрибуты:
+|атрибут|описание|
+|---|---|
+|`http_method_names`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`extra_context`|[примесь `ContextMixin()`](классы-представления-описание/base.md#примесь%20`ContextMixin()`)|
+|`initial`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`form_class`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`success_url`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`prefix`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`template_name`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+|`template_engine`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+|`response_class`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+|`content_type`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+
+Доступные атрибуты:
+|атрибут|описание|
+|---|---|
+|`request`|устанавливается методом `self.setup()`|
+|`args`|устанавливается методом `self.setup()`|
+|`kwargs`|устанавливается методом `self.setup()`|
+
+Методы:
+|метод|описание|
+|---|---|
+|`__init__(**kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`as_view(**initkwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`setup(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`dispatch(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`http_method_not_allowed(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`options(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`get(request, *args, **kwargs)`|[класс `ProcessFormView()`](#класс%20`ProcessFormView()`)|
+|`post(request, *args, **kwargs)`,<br>`put()`|[класс `ProcessFormView()`](#класс%20`ProcessFormView()`)|
+|`get_initial()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_prefix()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_form_class()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_form(form_class=None)`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_form_kwargs()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_success_url()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`form_valid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`form_invalid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_context_data()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_template_names()`|Возвращает список имен шаблонов для передачи в `self.render_to_response()`. По умолчанию возвращает список из одного элемента, содержащего значение `self.template_name`|
+|`render_to_response(context, **response_kwargs)`|Вызывается из методов `self.get()`, `self.post()` и т.д. Возвращает подготовленный HTTP-ответ для передачи в браузер. HTTP-ответ готовится с помощью класса, указанного в атрибуте `self.response_class`|
+```python
+context = {
+	'view': self,
+	'form': объект формы, переданный из self.post(), или иначе из self.form_class
+	**self.extra_context,
+	**kwargs # kwargs, переданные в get_context_data()
+}
+```
