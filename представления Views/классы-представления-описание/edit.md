@@ -3,6 +3,8 @@
 [класс `FormView()`](#класс%20`FormView()`)
 [примесь `ModelFormMixin()`](#примесь%20`ModelFormMixin()`)
 [класс `CreateView()`](#класс%20`CreateView()`)
+[класс `UpdateView()`](#класс%20`UpdateView()`)
+[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)
 
 ## примесь `FormMixin()`
 ---
@@ -295,8 +297,8 @@ context = {
 |`dispatch(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
 |`http_method_not_allowed(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
 |`options(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
-|`get(request, *args, **kwargs)`|[класс `ProcessFormView()`](#класс%20`ProcessFormView()`) Предварительно устанавливание `self.object` = `self.get_obje`|
-|`post(request, *args, **kwargs)`,<br>`put()`|[класс `ProcessFormView()`](#класс%20`ProcessFormView()`) Предварительно очищает `self.object`|
+|`get(request, *args, **kwargs)`|[класс `ProcessFormView()`](#класс%20`ProcessFormView()`) Предварительно устанавливает `self.object` = `self.get_object()`|
+|`post(request, *args, **kwargs)`,<br>`put()`|[класс `ProcessFormView()`](#класс%20`ProcessFormView()`) Предварительно устанавливает `self.object` = `self.get_object()`|
 |`get_initial()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_prefix()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_form_class()`|[примесь `ModelFormMixin()`](#примесь%20`ModelFormMixin()`)|
@@ -322,4 +324,16 @@ context = {
 }
 ```
 
+## примесь `DeletionMixin()`
+---
+>django.views.generic.edit
 
+Настраиваемые атрибуты:
+|атрибут|описание|
+|---|---|
+|`success_url`|Строка или `reverse_lazy()` - путь, куда осуществляется перенаправление после проверки валидности формы. Обязательный к заполнению. По умолчанию `None`|
+
+Методы:
+|метод|описание|
+|---|---|
+|`delete(request, *args, **kwargs)`|Вызывается из обработчика метода HTTP-запроса `self.post()`. Удаляет объект, полученный через `self.get_object()` и возвращает HTTP-ответ с ре|
