@@ -143,16 +143,16 @@ context = {
 |`slug_url_kwarg`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
 |`pk_url_kwarg`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
 |`query_pk_and_slug`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
-|`fields`||
+|`fields`|Список полей модели для отображения в форме. Применяется если не указан `self.form_class`. По умолчанию `None` (не должен указываться совместно с `form_class`|
 
 Методы:
 |метод|описание|
 |---|---|
 |`get_initial()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_prefix()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`get_form_class()`||
+|`get_form_class()`|Вызывается из `self.get_form()`. Возвращает значение `self.form_class`, если он задан. Если не задан, то с помощью фабрики форм создается новый класс формы с полями модели, указанными в `self.fields`|
 |`get_form(form_class=None)`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`get_form_kwargs()`||
+|`get_form_kwargs()`|Вызывается из `self.get_form()`. Возвращает данные для заполнения формы.|
 |`get_success_url()`||
 |`form_valid()`||
 |`form_invalid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
@@ -161,7 +161,6 @@ context = {
 |`get_queryset()`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
 |`get_slug_field()`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
 |`get_context_object_name(obj)`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
-
 ```python
 context = {
 	'view': self,
