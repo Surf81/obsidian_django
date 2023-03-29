@@ -364,9 +364,8 @@ context = {
 |`template_name_field`|[примесь `SingleObjectTemplateResponseMixin()`](#примесь%20`SingleObjectTemplateResponseMixin()`)|
 |`template_name_suffix`|Конечная часть имени шаблона. Используется если не задан атрибут `self.template_name`. По умолчанию `"_confirm_delete"`|
 |`success_url`|[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)|
-|`extra_context`|[примесь `ContextMixin()`](классы-представления-описание/base.md#примесь%20`ContextMixin()`)|
 |`initial`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`form_class`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`form_class`|Ссылка на класс формы. По умолчанию `Form`|
 |`success_url`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`prefix`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 
@@ -398,6 +397,7 @@ context = {
 |`render_to_response(context, **response_kwargs)`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
 |`delete(request, *args, **kwargs)`|[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)|
 |`post(request, *args, **kwargs)`|Проверяет форму, полученную методом `self.get_form()` на валидность и в зависимости от результата возвращает HTTP-ответ подготовленный методом `self.form_valid()` или `self.form_invalid()`|
+|`put(request, *args, **kwargs)`||
 |`get_success_url()`|[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)|
 |`get_initial()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_prefix()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
