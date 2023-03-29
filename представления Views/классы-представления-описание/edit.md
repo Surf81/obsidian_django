@@ -135,19 +135,33 @@ context = {
 |`form_class`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`success_url`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`prefix`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`extra_context`|[примесь `ContextMixin()`](классы-представления-описание/base.md#примесь%20`ContextMixin()`)|
+|`queryset`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`model`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`slug_field`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`context_object_name`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`slug_url_kwarg`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`pk_url_kwarg`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`query_pk_and_slug`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`fields`||
 
 Методы:
 |метод|описание|
 |---|---|
 |`get_initial()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_prefix()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`get_form_class()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_form_class()`||
 |`get_form(form_class=None)`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`get_form_kwargs()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`get_success_url()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`form_valid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_form_kwargs()`||
+|`get_success_url()`||
+|`form_valid()`||
 |`form_invalid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_context_data()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_object(queryset=None)`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`get_queryset()`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`get_slug_field()`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`get_context_object_name(obj)`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+
 ```python
 context = {
 	'view': self,
