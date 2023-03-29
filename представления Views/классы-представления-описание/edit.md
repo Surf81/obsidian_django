@@ -179,3 +179,54 @@ context = {
 ---
 >django.views.generic.edit
 
+Настраиваемые атрибуты:
+|атрибут|описание|
+|---|---|
+|`http_method_names`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`extra_context`|[примесь `ContextMixin()`](классы-представления-описание/base.md#примесь%20`ContextMixin()`)|
+|`initial`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`form_class`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`success_url`|[примесь `FormMixin()`](#примесь%20`FormMixin()`) Не обязательно указывать если у модели настроен `get_absolute_url()`|
+|`prefix`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`queryset`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`model`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`slug_field`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`context_object_name`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`slug_url_kwarg`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`pk_url_kwarg`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`query_pk_and_slug`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`fields`|[примесь `ModelFormMixin()`](#примесь%20`ModelFormMixin()`)|
+
+Доступные атрибуты:
+|атрибут|описание|
+|---|---|
+|`request`|устанавливается методом `self.setup()`|
+|`args`|устанавливается методом `self.setup()`|
+|`kwargs`|устанавливается методом `self.setup()`|
+|`object`|Содержит объект модели для передачи в контекст|
+
+Методы:
+|метод|описание|
+|---|---|
+|`__init__(**kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`as_view(**initkwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`setup(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`dispatch(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`http_method_not_allowed(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`options(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`get(request, *args, **kwargs)`|[класс `ProcessFormView()`](#класс%20`ProcessFormView()`)|
+|`post(request, *args, **kwargs)`,<br>`put()`|[класс `ProcessFormView()`](#класс%20`ProcessFormView()`)|
+|`get_initial()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_prefix()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_form_class()`|[примесь `ModelFormMixin()`](#примесь%20`ModelFormMixin()`)|
+|`get_form(form_class=None)`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_form_kwargs()`|[примесь `ModelFormMixin()`](#примесь%20`ModelFormMixin()`)|
+|`get_success_url()`|[примесь `ModelFormMixin()`](#примесь%20`ModelFormMixin()`)|
+|`form_valid()`|[примесь `ModelFormMixin()`](#примесь%20`ModelFormMixin()`)|
+|`form_invalid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_context_data()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`), [примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`get_object(queryset=None)`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`get_queryset()`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`) Не знает о существовании формы и не может получить queryset на основании модели, указанной в форме|
+|`get_slug_field()`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`get_context_object_name(obj)`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+
