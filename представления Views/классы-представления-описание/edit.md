@@ -362,7 +362,14 @@ context = {
 |`response_class`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
 |`content_type`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
 |`template_name_field`|[примесь `SingleObjectTemplateResponseMixin()`](#примесь%20`SingleObjectTemplateResponseMixin()`)|
-|`template_name_suffix`|[примесь `SingleObjectTemplateResponseMixin()`](#примесь%20`SingleObjectTemplateResponseMixin()`)|
+|`template_name_suffix`|Конечная часть имени шаблона. Используется если не задан атрибут `self.template_name`. По умолчанию `"_confirm_delete"`|
+|`success_url`|[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)|
+|`extra_context`|[примесь `ContextMixin()`](классы-представления-описание/base.md#примесь%20`ContextMixin()`)|
+|`initial`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`form_class`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`success_url`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`prefix`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+
 
 Доступные атрибуты:
 |атрибут|описание|
@@ -375,7 +382,7 @@ context = {
 Методы:
 |метод|описание|
 |---|---|
-|`__init__(**kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`__init__(**kwargs)`|Устанавливает значение любых пользовательских атрибутов. Проверка безопасности метода `self.delete()`|
 |`as_view(**initkwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
 |`setup(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
 |`dispatch(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
@@ -389,6 +396,18 @@ context = {
 |`get_context_data(request, **kwargs)`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
 |`get_template_names()`|[примесь `SingleObjectTemplateResponseMixin()`](#примесь%20`SingleObjectTemplateResponseMixin()`)|
 |`render_to_response(context, **response_kwargs)`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
+|`delete(request, *args, **kwargs)`|[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)|
+|`post(request, *args, **kwargs)`|[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)|
+|`get_success_url()`|[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)|
+|`get_initial()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_prefix()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_form_class()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_form(form_class=None)`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_form_kwargs()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_success_url()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`form_valid()`|Вызывается из обработчика метода HTTP-запроса `POST` в случае подтверждения валидности формы. Возвращает HTTP-ответ с редиректом на URL, полученный через `self.get_success_url()`|
+|`form_invalid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_context_data()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 ```python
 context = {
 	'view': self,
