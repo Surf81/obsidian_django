@@ -392,7 +392,6 @@ context = {
 |`get_queryset()`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
 |`get_slug_field()`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
 |`get_context_object_name(obj)`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
-|`get_context_data(request, **kwargs)`|[примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
 |`get_template_names()`|[примесь `SingleObjectTemplateResponseMixin()`](#примесь%20`SingleObjectTemplateResponseMixin()`)|
 |`render_to_response(context, **response_kwargs)`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
 |`delete(request, *args, **kwargs)`|[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)|
@@ -407,10 +406,11 @@ context = {
 |`get_success_url()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`form_valid(form)`|Вызывается из обработчика метода HTTP-запроса `POST` в случае подтверждения валидности формы. Удаляет объект модели. Возвращает HTTP-ответ с редиректом на URL, полученный через `self.get_success_url()`. Атрибут `form` не используется|
 |`form_invalid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`get_context_data()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_context_data()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`), [примесь `SingleObjectMixin()`](#примесь%20`SingleObjectMixin()`)|
 ```python
 context = {
 	'view': self,
+	'form': объект формы, переданный из self.post(), или иначе из self.form_class	
 	'object': # Объект модели self.object
 	<context_object_name>: # Объект модели, имя атрибута из get_context_object_name()
 	**self.extra_context,
