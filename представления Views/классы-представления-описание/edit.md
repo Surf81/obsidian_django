@@ -34,3 +34,31 @@ context = {
 }
 ```
 
+## класс `ProcessFormView()`
+---
+>django.views.generic.edit
+
+Настраиваемые атрибуты:
+|атрибут|описание|
+|---|---|
+|`http_method_names`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+
+Доступные атрибуты:
+|атрибут|описание|
+|---|---|
+|`request`|устанавливается методом `self.setup()`|
+|`args`|устанавливается методом `self.setup()`|
+|`kwargs`|устанавливается методом `self.setup()`|
+
+Методы:
+|метод|описание|
+|---|---|
+|`__init__(**kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`as_view(**initkwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`setup(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`dispatch(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`http_method_not_allowed(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`options(request, *args, **kwargs)`|[класс `View()`](классы-представления-описание/base.md#класс%20`View()`)|
+|`get(request, *args, **kwargs)`|Возвращает HTTP-ответ подготовленный методом `self.render_to_response()` с контекстом из `self.get_context_data()` для передачи браузеру в метод `self.dispatch()`.|
+|`post(request, *args, **kwargs)`|
+
