@@ -160,7 +160,7 @@ context = {
 |`get_success_url()`|Вызывается из `self.form_valid()`. Возвращает строку с адресом URL из `self.success_url` для переадрессации в случае подтверждения валидности формы. Если он не задан делается попытка вернуть из объекта модели `get_absolute_url()`|
 |`form_valid()`|Вызывается из обработчика метода HTTP-запроса `POST` в случае подтверждения валидности формы. Сохраняет данные формы в модель и возвращает HTTP-ответ с редиректом на URL, полученный через `self.get_success_url()`|
 |`form_invalid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
-|`get_context_data()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
+|`get_context_data()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`), [примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
 |`get_object(queryset=None)`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
 |`get_queryset()`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`) Не знает о существовании формы и не может получить queryset на основании модели, указанной в форме|
 |`get_slug_field()`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
@@ -169,7 +169,8 @@ context = {
 context = {
 	'view': self,
 	'form': объект формы, переданный из self.post(), или иначе из self.form_class
-	**self.extra_context,
+	'object': # Объект модели
+	<context_object_name>: # Объект модели, имя атрибута из get_context_object_name()	**self.extra_context,
 	**kwargs # kwargs, переданные в get_context_data()
 }
 ```
