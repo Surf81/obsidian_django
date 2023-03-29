@@ -49,7 +49,7 @@ context = {
 |`response_class`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
 |`content_type`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
 |`template_name_field`|Имя поля модели, в котором хранится путь к шаблону. Проверяется если не задан атрибут `self.template_name`. По умолчанию `None`|
-|`template_name_suffix`|Конечная часть имени шаблона. Используется если не задан атрибут `self.template_name`. По умолчанию "_detail"|
+|`template_name_suffix`|Конечная часть имени шаблона. Используется если не задан атрибут `self.template_name`. По умолчанию `"_detail"`|
 
 Методы:
 |метод|описание|
