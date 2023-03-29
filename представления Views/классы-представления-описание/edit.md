@@ -162,7 +162,7 @@ context = {
 |`form_invalid()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_context_data()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_object(queryset=None)`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
-|`get_queryset()`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
+|`get_queryset()`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`) Не знает о существовании формы и не может получить queryset на основании модели, указанной в форме|
 |`get_slug_field()`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
 |`get_context_object_name(obj)`|[примесь `SingleObjectMixin()`](классы-представления-описание/detail.md#примесь%20`SingleObjectMixin()`)|
 ```python
