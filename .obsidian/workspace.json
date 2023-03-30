@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "представления Views/классы-представления-описание/edit.md",
+                "file": "представления Views/классы-представления-описание/base.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "871328b943193e97",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "представления Views/классы-представления-описание/list.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -98,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "представления Views/классы-представления-описание/edit.md",
+                "file": "представления Views/классы-представления-описание/list.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "представления Views/классы-представления-описание/edit.md",
+                "file": "представления Views/классы-представления-описание/list.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "представления Views/классы-представления-описание/edit.md"
+                "file": "представления Views/классы-представления-описание/list.md"
               }
             }
           }
@@ -159,12 +171,13 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "91fe6e9ce8efb14f",
+  "active": "871328b943193e97",
   "lastOpenFiles": [
-    "представления Views/классы-представления.md",
-    "представления Views/классы-представления-описание/detail.md",
     "представления Views/классы-представления-описание/edit.md",
+    "представления Views/классы-представления-описание/detail.md",
     "представления Views/классы-представления-описание/base.md",
+    "представления Views/Процессоры контекста шаблонов.md",
+    "представления Views/классы-представления.md",
     "представления Views/классы-представления-описание/list.md",
     "представления Views/классы-представления-описание",
     "Формы Django/_формы моделей Django.md",
@@ -189,7 +202,6 @@
     "Модели Django/Поля модели - Опции полей.md",
     "Валидация/сообщения об ошибках валидации.md",
     "Валидация",
-    "Модели Django/class Meta.md",
     "Формы Django"
   ]
 }
