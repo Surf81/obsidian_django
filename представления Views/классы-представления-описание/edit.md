@@ -5,6 +5,7 @@
 [класс `CreateView()`](#класс%20`CreateView()`)
 [класс `UpdateView()`](#класс%20`UpdateView()`)
 [примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)
+[класс `DeleteView()`](#класс%20`DeleteView()`)
 
 ## примесь `FormMixin()`
 ---
@@ -343,7 +344,7 @@ context = {
 
 ## класс `DeleteView()`
 ---
->django.views.generic.detail
+>django.views.generic.edit
 
 Настраиваемые атрибуты:
 |атрибут|описание|
@@ -396,7 +397,6 @@ context = {
 |`render_to_response(context, **response_kwargs)`|[примесь `TemplateResponseMixin()`](классы-представления-описание/base.md#примесь%20`TemplateResponseMixin()`)|
 |`delete(request, *args, **kwargs)`|[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)|
 |`post(request, *args, **kwargs)`|Проверяет форму, полученную методом `self.get_form()` на валидность и в зависимости от результата возвращает HTTP-ответ подготовленный методом `self.form_valid()` или `self.form_invalid()`|
-|`put(request, *args, **kwargs)`||
 |`get_success_url()`|[примесь `DeletionMixin()`](#примесь%20`DeletionMixin()`)|
 |`get_initial()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
 |`get_prefix()`|[примесь `FormMixin()`](#примесь%20`FormMixin()`)|
