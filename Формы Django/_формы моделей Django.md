@@ -141,9 +141,9 @@ class ClassForm(ModelForm):
 		return val.capitalize() # Возвращенное в поле значение будет с большой буквы
 
 	def clean(self): # Валидация формы в целом
-		super().clean() # Заполняет cleaned_data
+		super().clean() 
 		errors = {}
-		if not self.cleaned_data['field2']:
+		if not self.cleaned_data['field2']: # cleaned_data заполняется только при вызове is_valid()
 			errors['field2'] = ValidationError("Не заполнено поле field2")
 		if self.cleaned_data['price'] < 0:
 			errors['price'] = ValidationError("Отрицательная цена")
