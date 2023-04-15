@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Формы Django/_формы моделей Django.md",
+                "file": "представления Views/классы-представления-описание/edit.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Формы Django/_формы моделей Django.md",
+                "file": "представления Views/классы-представления-описание/edit.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Формы Django/_формы моделей Django.md",
+                "file": "представления Views/классы-представления-описание/edit.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Формы Django/_формы моделей Django.md"
+                "file": "представления Views/классы-представления-описание/edit.md"
               }
             }
           }
@@ -173,6 +173,7 @@
   },
   "active": "871328b943193e97",
   "lastOpenFiles": [
+    "Формы Django/_формы моделей Django.md",
     "Формы Django/Fields - поля формы.md",
     "представления Views/классы-представления-описание/list.md",
     "представления Views/классы-представления-описание/edit.md",
@@ -181,7 +182,6 @@
     "представления Views/Процессоры контекста шаблонов.md",
     "представления Views/классы-представления.md",
     "представления Views/классы-представления-описание",
-    "Формы Django/_формы моделей Django.md",
     "представления Views/Пагинатор.md",
     "сайт на Django/_Памятка по командам.md",
     "представления Views/функция-представление.md",
