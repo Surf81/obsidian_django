@@ -37,7 +37,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "представления Views/классы-представления-описание/list.md",
+                "file": "представления Views/Пагинатор.md",
                 "mode": "source",
                 "source": false
               }
@@ -110,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "представления Views/классы-представления-описание/list.md",
+                "file": "представления Views/Пагинатор.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "представления Views/классы-представления-описание/list.md",
+                "file": "представления Views/Пагинатор.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "представления Views/классы-представления-описание/list.md"
+                "file": "представления Views/Пагинатор.md"
               }
             }
           }
@@ -173,10 +173,10 @@
   },
   "active": "871328b943193e97",
   "lastOpenFiles": [
+    "представления Views/классы-представления-описание/list.md",
     "представления Views/классы-представления-описание/edit.md",
     "Формы Django/_формы моделей Django.md",
     "Формы Django/Fields - поля формы.md",
-    "представления Views/классы-представления-описание/list.md",
     "представления Views/классы-представления-описание/detail.md",
     "представления Views/классы-представления-описание/base.md",
     "представления Views/Процессоры контекста шаблонов.md",
