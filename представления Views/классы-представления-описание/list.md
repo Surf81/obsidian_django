@@ -31,7 +31,7 @@
 |`get_paginate_orphans()`|Вызывается из `self.paginate_sueryset()`. Возвращает значение `self.paginate_orphans`|
 |`get_allow_empty()`|Вызывается из `self.paginate_sueryset()`. Возвращает значение `self.allow_empty`|
 |`get_context_object_name(object_list)`|Вызывается из `self.get_context_data()`. Задает в контексте альтернативное имя ключу `object_list`, в котором хранится queryset. Альтернативным именем будет являться занчение, указанное в параметре `self.context_object_name`, а если оно не задано, тогда имя модели `obj._meta.model_name+"_list"`|
-|`get_context_data(request, **kwargs)`|Вызывается из методов `self.get()`, `self.post()` и прочих. Формирует справочник `context`, который затем будет передаваться в шаблон.<br>По умолчанию контекст содержит одно значение `view`, содержащее instance класса-контроллера. Так же в контекст добавляются значения `**kwargs` (из маршрутизатора) и `self.extra_context`, а так же атрибуты: `paginator`, `page_obj`, `is_paginated`, `object_list` и атрибут с именем, возвращаемым `self.get_context_object_name()`|
+|`get_context_data(self, *, object_list=None, **kwargs)`|Вызывается из методов `self.get()`, `self.post()` и прочих. Формирует справочник `context`, который затем будет передаваться в шаблон.<br>По умолчанию контекст содержит одно значение `view`, содержащее instance класса-контроллера. Так же в контекст добавляются значения `**kwargs` (из маршрутизатора) и `self.extra_context`, а так же атрибуты: `paginator`, `page_obj`, `is_paginated`, `object_list` и атрибут с именем, возвращаемым `self.get_context_object_name()`|
 ```python
 context = {
 	'view': self,
