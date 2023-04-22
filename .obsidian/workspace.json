@@ -42,9 +42,21 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "f8544b58e0a5c6f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Django REST Framework/GroupSerializer vs SerializerMethodField.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -110,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "представления Views/классы-представления-описание/list.md",
+                "file": "Django REST Framework/GroupSerializer vs SerializerMethodField.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -127,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "представления Views/классы-представления-описание/list.md",
+                "file": "Django REST Framework/GroupSerializer vs SerializerMethodField.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -150,7 +162,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "представления Views/классы-представления-описание/list.md"
+                "file": "Django REST Framework/GroupSerializer vs SerializerMethodField.md"
               }
             }
           }
@@ -171,10 +183,12 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "871328b943193e97",
+  "active": "f8544b58e0a5c6f1",
   "lastOpenFiles": [
-    "представления Views/Пагинатор.md",
     "представления Views/классы-представления-описание/list.md",
+    "Django REST Framework/GroupSerializer vs SerializerMethodField.md",
+    "Django REST Framework",
+    "представления Views/Пагинатор.md",
     "представления Views/классы-представления-описание/edit.md",
     "Формы Django/_формы моделей Django.md",
     "Формы Django/Fields - поля формы.md",
@@ -200,7 +214,6 @@
     "Модели Django/Поля модели - Поля данных.md",
     "Модели Django/Поля модели - ForeignKey.md",
     "Модели Django/Поля модели - Опции полей.md",
-    "Валидация/сообщения об ошибках валидации.md",
     "Валидация",
     "Формы Django"
   ]
