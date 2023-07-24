@@ -54,9 +54,19 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "bbc552894a33e710",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.2.7"
+              }
+            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -99,6 +109,14 @@
             "type": "leaf",
             "state": {
               "type": "starred",
+              "state": {}
+            }
+          },
+          {
+            "id": "388c867224edeccc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
               "state": {}
             }
           }
@@ -183,7 +201,7 @@
       "command-palette:Открыть палитру команд": false
     }
   },
-  "active": "f8544b58e0a5c6f1",
+  "active": "bbc552894a33e710",
   "lastOpenFiles": [
     "сайт на Django/3. Добавление приложений.md",
     "сайт на Django/1. Установка и настройка Django.md",
